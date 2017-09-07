@@ -1,0 +1,17 @@
+Topics to cover:
+
+
+* js vms
+  - vm <-> ecma262 relationship
+  - compiler + jit
+* embedded vm in node
+  - promises
+    - domains
+    - post mortem debugging
+    - util.promisify
+  - modules
+    - interop
+    - loader vs syntax
+  - API vs ABI
+  - nAPI
+  - Turbofan + ignition

@@ -1,0 +1,316 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title The Hilarious Misadventures of Being a Platform Downstream From Your Language
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  style.
+    .hello {
+      background-image: url('images/hello-tharr.gif')
+    }
+    .ninety-five {
+      background-image: url('images/1995.gif')
+    }
+    .brendan {
+      background-image: url('images/brendan.jpg')
+    }
+    .node {
+      background-image: url('images/node.jpg')
+    }
+    .dahl {
+      background-image: url('images/dahl.jpg')
+    }
+    .jsconf {
+      background-image: url('images/dahl-jsconf.png')
+    }
+    .monster {
+      background-image: url('images/monster.gif')
+    }
+    .multiplicity {
+      background-image: url('images/multiplicity.jpg')
+    }
+    .vee-eight {
+      background-image: url('images/chrome-v8.jpg')
+    }
+    .edge {
+      background-image: url('images/edge.jpg')
+    }
+    .webkit {
+      background-image: url('images/webkit.png')
+    }
+    .firefox {
+      background-image: url('images/firefox.jpg')
+    }
+    .brewster {
+      background-image: url('images/brewster.gif')
+    }
+    .io {
+      background-image: url('images/io.jpg')
+    }
+    .ready {
+      background-image: url('images/ready.jpg')
+    }
+    .evolve {
+      background-image: url('images/evolve.gif')
+    }
+    .back {
+      background-image: url('images/back.gif')
+    }
+
+  body
+
+    article
+
+      section
+        h2 The Hilarious Misadventures
+        h3 Of Being a Platform Downstream From Your Language
+        h4 With your host
+        h4
+          a(href='https://twitter.com/MylesBorins') @MylesBorins
+        p  NordicJS 2017
+        
+      section(data-bespoke-backdrop='hello')
+        h1 Hej!
+        
+      section
+        h1 My Name is Myles
+        img.headroom(src='images/me.jpg' alt='itsa me!' width='200px' height='200px')
+      
+      section
+        h3 I am gainfully employed by Google as a Developer Advocate
+        h4 Focusing on the Node.js ecosystem and GCP
+        
+        img(src='images/gcp.png' alt='Google Cloud Platform' style='background-color:white;')
+        
+        h5.headroom The opinions expressed in this talk are solely my own
+      
+      section(data-bespoke-backdrop='ninety-five')
+        h1 once upon a time in 1995
+      
+      section(data-bespoke-backdrop='brendan')
+        h2 Brendan Eich
+        h3 created the language
+        h2 mocha
+      
+      section
+        h1 in 10 days
+      
+      section
+        h2 Four months later
+        h3 it was renamed
+        h2 LiveScript
+      
+      section
+        h2 Two months later
+        h3 it was renamed
+        h2 JavaScript
+
+      section
+        h2 Over the next two years
+        h3 The language was standardized
+        h2 as ECMASCript
+        h3 At ECMA International
+        h4 European Computer Manufacturers Association
+
+      section
+        h3 Wait is it actually called ECMAScript?
+        img.headroom(src='images/confused.gif' alt='classic dank meme')
+      
+      section(data-bespoke-backdrop='monster')
+        h3 Does that make JavaScript
+        h2 ECMAScript's Monster?
+
+      section
+        h3 ECMAScript is the standard
+        h2 JavaScript is an implementation
+        h4 *cough* so was ActionScript 3 *cough*
+
+      section(data-bespoke-backdrop='multiplicity')
+        h1 Today we have many implementations
+      
+      section(data-bespoke-backdrop='vee-eight')
+        h3 In Chrome
+        h2 There is V8
+      
+      section(data-bespoke-backdrop='edge')
+        h3 In Edge
+        h2 There is Chakra
+
+      section(data-bespoke-backdrop='webkit')
+        h3 In WebKit (Safari)
+        h2 There is JavaScriptCore
+      
+      section(data-bespoke-backdrop='firefox')
+        h3 In Firefox
+        h2 There is SpiderMonkey
+
+      section
+        h3 They are all implementation of
+        h2 ECMA-262
+        h3 The ECMAScript® 2017 Language Specification
+
+      section(data-bespoke-backdrop='node')
+        h1 Let's talk about Node
+      
+      section(data-bespoke-backdrop='dahl')
+        h1 It was created by Ryan Dahl
+      
+      section(data-bespoke-backdrop='jsconf')
+        h1 First presented at JSConf.eu 2009
+
+      section
+        h1 Node.js has never implemented JavaScript
+
+      section(data-bespoke-backdrop='brewster')
+        h1 It inherited it
+
+      section
+        h3 It was bootstrapped by embedding
+        h2 The V8 engine
+
+      section
+        h4 We get the language feature
+        h3 Of the embedded version of V8
+
+      section(data-bespoke-backdrop='io')
+        h3 This was one of the contentious point in the io.js fork
+
+      section
+        h1 We are now actively updating V8
+
+      section
+        h4 Which in turn
+        h3 Updates the language features offered
+      
+      section(data-bespoke-backdrop='ready')
+
+      section
+        h1 A Practical Example
+
+      section
+        h3 In Node.js v7.7.0
+        h2 We updated V8 to 5.5
+
+      section
+        h3 With it came async / await
+        h2 🎉
+
+      section
+        h3 This in turn made it clear
+        h2 We needed better promise support
+
+      section
+        h3 Which in turn
+        h2 Lead to util.promisify
+        h3 in 8.0.0
+
+      section
+        h3 Which in turn required massive refactoring
+        h2 To Domains
+
+      section
+        h3 Which are technically are deprecated
+        h2 but we don't have a better solution
+
+      section
+        h3 It also resulted in problems with
+        h2 Post mortem debugging
+        h3 For uncaught exceptions
+
+      section
+        h3 Because Node.js has made a lot of assumptions
+        h2 Regarding Callbacks
+
+      section(data-bespoke-backdrop='evolve')
+        h3 As the language evolves
+        h2 We have to keep up
+      
+      section(data-bespoke-backdrop='back')
+        h1 Taking a step back
+
+      section
+        img(src='images/babby.jpg' alt='how is language babby formed')
+
+      section
+        h3 The Spec is
+        h2 ECMA-262
+
+      section
+        h3 The Committee who implements it is
+        img.headroom(src='images/tc39.png' alt='logo for tc39')
+
+      section
+        h3 The committee meets
+        h2 every other month
+        h3 At locations around the world
+
+      section
+        h2 The participants include
+        ul
+          li.hide
+          li Major Browser Vendors
+          li Academics
+          li Industry Experts
+          li Open Source Maintainers
+          li Maybe you?
+
+      section
+        h1 Can Anyone Join?
+
+      section
+        h1 What is a Member?
+      
+      section
+        h1 What is a Delegate?
+
+      section
+        h1 How does a feature get developed?
+
+      section
+        h1 Consensus
+
+      section
+        h2 The Stages
+        li.hide
+        li Stage 0: strawman
+        li Stage 1: proposal
+        li Stage 2: draft
+        li Stage 3: candidate
+        li Stage 4: finished
+
+      section
+        h1 test262
+
+      section
+        h3 Every year
+        h2 A new version of the specification is published
+
+      section
+        h3 Although some people like to think of the github repo
+        h2 As a living specification
+        h3 similar to how the HTML specification works
+
+      section
+        img(src='images/spec1.png' alt='spec definition of null')
+
+      section
+        img(src='images/spec2.png' alt='spec definition of isArray' width='80%')
+
+      section
+        h1 JavaScript Engines Implement the Specification
+
+      section
+        h1 BUT
+      
+      section
+        img(src='images/think.png' alt='Think of the spec as another implementation' width='50%')
+      
+      section
+        h2 Thank You
+        img.headroom(src='images/best-gif-evar.gif' alt='a surfing puppy' width='20%')
+        h4 @MylesBorins
+
+    script(src='build/build.js')
