@@ -59,6 +59,61 @@ html
     .back {
       background-image: url('images/back.gif')
     }
+    .js {
+      background-image: url('images/js.png')
+    }
+    .morticia {
+      background-image: url('images/morticia.gif')
+    }
+    .turtle {
+      background-image: url('images/turtle.png')
+    }
+    .napi {
+      background-image: url('images/napi.gif')
+    }
+    .clever {
+      background-image: url('images/clever.jpg')
+    }
+    .science {
+      background-image: url('images/science.gif')
+    }
+    .turtles {
+      background-image: url('images/turtles.gif')
+    }
+    
+    .small {
+      background-image: url('images/small.jpg')
+    }
+    .complicated {
+      background-image: url('images/complicated.gif')
+    }
+    .abi {
+      background-image: url('images/abi.png')
+    }
+    .ten {
+      background-image: url('images/ten.gif')
+    }
+    .gimmee {
+      background-image: url('images/gimmee.gif')
+    }
+    .domain {
+      background-image: url('images/domain.gif')
+    }
+    .call {
+      background-image: url('images/call.gif')
+    }
+    .anyone {
+      background-image: url('images/anyone.gif')
+    }
+    .warp {
+      background-image: url('images/warp.gif')
+    }
+    .newyear {
+      background-image: url('images/newyear.gif')
+    }
+    .major {
+      background-image: url('images/major.jpg')
+    }
 
   body
 
@@ -88,14 +143,14 @@ html
         h5.headroom The opinions expressed in this talk are solely my own
       
       section(data-bespoke-backdrop='ninety-five')
-        h1 once upon a time in 1995
+        h1 once upon a time in
       
       section(data-bespoke-backdrop='brendan')
         h2 Brendan Eich
         h3 created the language
         h2 mocha
       
-      section
+      section(data-bespoke-backdrop='ten')
         h1 in 10 days
       
       section
@@ -171,8 +226,8 @@ html
         h3 It was bootstrapped by embedding
         h2 The V8 engine
 
-      section
-        h4 We get the language feature
+      section(data-bespoke-backdrop='gimmee')
+        h4 We get the language features
         h3 Of the embedded version of V8
 
       section(data-bespoke-backdrop='io')
@@ -183,7 +238,7 @@ html
 
       section
         h4 Which in turn
-        h3 Updates the language features offered
+        h3 Updates the language features offered in Node.js
       
       section(data-bespoke-backdrop='ready')
 
@@ -207,7 +262,7 @@ html
         h2 Lead to util.promisify
         h3 in 8.0.0
 
-      section
+      section(data-bespoke-backdrop='domain')
         h3 Which in turn required massive refactoring
         h2 To Domains
 
@@ -215,12 +270,12 @@ html
         h3 Which are technically are deprecated
         h2 but we don't have a better solution
 
-      section
+      section(data-bespoke-backdrop='morticia')
         h3 It also resulted in problems with
         h2 Post mortem debugging
         h3 For uncaught exceptions
 
-      section
+      section(data-bespoke-backdrop='call')
         h3 Because Node.js has made a lot of assumptions
         h2 Regarding Callbacks
 
@@ -257,7 +312,7 @@ html
           li Open Source Maintainers
           li Maybe you?
 
-      section
+      section(data-bespoke-backdrop='anyone')
         h1 Can Anyone Join?
 
       section
@@ -284,9 +339,13 @@ html
       section
         h1 test262
 
-      section
+      section(data-bespoke-backdrop='warp')
+        h3 A feature can only move
+        h2 one stage per meeting
+
+      section(data-bespoke-backdrop='newyear')
         h3 Every year
-        h2 A new version of the specification is published
+        h4 A new version of the specification is published
 
       section
         h3 Although some people like to think of the github repo
@@ -300,13 +359,103 @@ html
         img(src='images/spec2.png' alt='spec definition of isArray' width='80%')
 
       section
-        h1 JavaScript Engines Implement the Specification
+        h3 JavaScript Engines
+        h2 Implement the Specification
 
       section
         h1 BUT
       
       section
         img(src='images/think.png' alt='Think of the spec as another implementation' width='50%')
+      
+      section(data-bespoke-backdrop='monster')
+        h3 Does that make ECMAScript
+        h2 JavaScript's Monster?
+      
+      section
+        img(src='images/tc39.png' alt='logo for tc39')
+      
+      section
+        img(src='images/ecma262.png' alt='ecma262' width='70%')
+      
+      section(data-bespoke-backdrop='vee-eight')
+      
+      section(data-bespoke-backdrop='turtle')
+      
+      section
+        img(src='images/bot.png' alt='twitter bot' height='50%')
+      
+      section
+        h3 V8 has a C++ API
+        h2 Used by Node and Native Module Authors
+      
+      section(data-bespoke-backdrop='abi')
+        h3 The compiled code relies on an
+        h2 Application Binary Interface
+      
+      section
+        h3 Semver Minor Changes
+        h2 To the V8 API
+        h3 Can Create Semver Major Changes
+        h2 To the compiled ABI
+      
+      section(data-bespoke-backdrop='major')
+        h3 This means updating V8
+        h2 Is Semver Major
+        h3 Which limits us to 2 upgrades a year
+      
+      section
+        h3 This also means that code compiled with one major version of node
+        h2 Will not work
+        h3 With another major version
+      
+      section
+        h4 This is independant of tracking changes in the V8 API
+        h3 Which could break all the native modules
+        h4 At an implementation level
+      
+      section
+        h3 The initial attempt to solve this was
+        h2 NAN
+        h3 Native Abstractions for Node
+      
+      section
+        h3 NAN offers an intermediate API to write against
+        h2 So that changes to the V8 Api
+        h3 Don't break your code
+      
+      section
+        h1 This didn't solve the ABI Problem
+      
+      section(data-bespoke-backdrop='napi')
+        h1 Enter the N-API
+      
+      section
+        h3 The N-API is an ABI stable abstraction
+        h2 Meaning updates to the V8 ABI
+        h3 Don't break your native code
+      
+      section(data-bespoke-backdrop='clever')
+        h3 If the ABI is stable
+        h2 other engines can shim against it
+        h3 Now you can use any engine in node
+      
+      section(data-bespoke-backdrop='science')
+        h1 N-API is shipping as experimental in 8.x
+
+      section(data-bespoke-backdrop='complicated')
+        h1 There are a lot of moving parts
+      
+      section(data-bespoke-backdrop='turtles')
+        h2 We are trying to build abstractions
+        h3 so you do not need to understand everything
+
+      section(data-bespoke-backdrop='small')
+        h3 We do this work so you can focus on your product
+        h2 rather than getting lost in the tools
+      
+      section
+        img(src='images/js.png' width='40%')
       
       section
         h2 Thank You
